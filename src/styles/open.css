@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-header {
+  width: 100vw;
+  height: 10vh;
+  background-color: #c6e6ff;
+  border-radius: 0, 0, 1em, 1em;
+  border-bottom: 4px solid darkslategray;
+  position: relative;
+
+  header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10em;
+    position: relative;
+    padding-left: 8vw;
+
+    img {
+      height: 100%;
+
+      border-radius: 1em;
+      scale: 1.9;
+      transition: all 300ms ease-in-out;
+    }
+    img:hover {
+      transform: translateY(0.2em);
+    }
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 50%;
+
+      .link {
+        text-decoration: none;
+        color: black;
+        font-family: "Poppins", monospace;
+        letter-spacing: 1px;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding: 0.5em;
+        border-radius: 10px;
+        transition: all 300ms ease-in-out;
+        font-weight: 400;
+      }
+      .link:hover {
+        background-color: #fedada;
+        transform: translateY(5px);
+      }
+    }
+
+    .hamburger {
+      display: none;
+    }
+    .drop-down {
+      display: none;
+    }
+  }
+}
+
+.main-footer {
+  width: 100vw;
+  min-height: 20vh;
+  background: linear-gradient(45deg, #241f32, #ff83ff);
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0em;
+
+  .links {
+    width: calc(0.6 * 100vw);
+    height: calc(0.1 * 100vh);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+
+    .linking {
+      color: #fedada;
+      font-size: 1.4em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5em;
+      border-radius: 50%;
+      transition: all 100ms ease-in-out;
+      background-color: rgba(238, 140, 12, 0.267);
+    }
+    .linking:hover {
+      background-color: rgba(247, 244, 240, 0.267);
+    }
+  }
+
+  .actions {
+    width: calc(0.6 * 100vw);
+    height: calc(0.1 * 100vh);
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: calc(0.6 * 100vw);
+      height: calc(0.1 * 100vh);
+      gap: 1vw;
+
+      .link {
+        text-decoration: underline;
+        font-size: 0.8em;
+        color: white;
+        font-family: "Poppins", monospace;
+        letter-spacing: 1px;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding: 0.5em;
+        border-radius: 10px;
+        transition: all 300ms ease-in-out;
+        font-weight: 400;
+      }
+      .link:hover {
+        color: black;
+      }
+    }
+  }
+
+  footer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      color: white;
+      font-family: "Poppins", monospace;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .main-header {
+    header {
+      nav {
+        display: none;
+      }
+      .hamburger {
+        display: grid;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 0.3em;
+        cursor: pointer;
+        color: black;
+        font-size: 2em;
+      }
+      .show {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 50vw;
+        height: max-content;
+        position: absolute;
+        right: 0;
+        top: calc(10vh);
+        z-index: 999;
+        background-color: #c6e6ffaf;
+        gap: 1em;
+        border-radius: 2em;
+
+        .link {
+          text-decoration: none;
+          color: black;
+          font-family: "Poppins", monospace;
+          letter-spacing: 1px;
+          padding-left: 2em;
+          padding-right: 2em;
+          padding: 0.5em;
+          border-radius: 10px;
+          transition: all 300ms ease-in-out;
+          font-weight: 400;
+        }
+        .link:hover {
+          background-color: #fedada;
+          transform: translateY(5px);
+        }
+      }
+    }
+  }
+}
